@@ -10,18 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBAction func clickBtn(_ sender: UIButton) {
-        print ("нажата кнопка")
-    }
+    @IBOutlet weak var myToggle: UISwitch!
     
     
-    @IBAction func mySwitchBtn(_ sender: Any) {
-        if (sender as AnyObject).isOn {
-            print ("Switch is on")
-        } else {
-            print ("Switch is off")
-        }
-    }
+    
+    
     
     
     
@@ -34,6 +27,27 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func clickBtn(_ sender: UIButton) {
+        print ("нажата кнопка")
+        
+        if myToggle.isOn {
+            print ("Great!! Button is Pressed!!")
+        } else {
+            print ("Noup, Sorry Button is not Pressed")
+        }
+        
+    }
+
+    @IBAction func mySwitchBtn(_ sender: Any) {
+        if (sender as AnyObject).isOn {
+            print ("Switch is on")
+        } else {
+            print ("Switch is off")
+        }
+    }
+    
+
 
 }
+
 
